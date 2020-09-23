@@ -1,3 +1,5 @@
+const eqArrays = require('./eqArrays');
+
 const assertArraysEqual = function (actualArray, expectedArray) {
   if (typeof (actualArray) !== 'object' || typeof (expectedArray) !== 'object') {
     return `🛑🛑🛑 Assertion Failed: ${[actualArray]} !== ${[expectedArray]}`;
@@ -11,3 +13,4 @@ const assertArraysEqual = function (actualArray, expectedArray) {
   }
   return (`✅✅✅ Assertion Passed: ${[actualArray]} === ${[expectedArray]}`);
 };
+module.exports = assertArraysEqual;
