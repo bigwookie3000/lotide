@@ -29,10 +29,10 @@
 //   return (`✅✅✅ Assertion Passed: ${[actualArray]} === ${[expectedArray]}`);
 // };
 const middle = function(arrOne) {
-  let arrLength = array.length;
-  let midNum = [];
+  let arrLength = arrOne.length;
+  let midNum = []; //new array
   if (arrLength < 3) {
-    return middleNum;
+    return midNum;
   } else if (arrLength % 2 === 0) {
       midNum.push(arrOne[(arrLength/2) - 1]);
       midNum.push(arrOne[arrLength / 2]);
@@ -41,3 +41,7 @@ const middle = function(arrOne) {
   }
 return midNum;
 };
+module.exports = middle;
+
+// console.log(assertArraysEqual(middle([1]), [])); // => []
+// console.log(assertArraysEqual(middle([1, 2]), [])); // => []
